@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Heimamberg – Bergamo, Heim am Berg</title>
+  <meta name="description" content="Dein persönlicher Reiseführer für Bergamo auf Deutsch: Sehenswürdigkeiten, Restaurants, Mobilität und Insider-Tipps." />
+  <style>
+    :root {
+      --bg: #faf7f2; --white: #ffffff; --accent: #b4582a;
+      --accent-dark: #7b3713; --text: #1e1e1e; --muted: #666;
+      --border: #e0d6c8; --radius: 12px; --shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; font-size: 16px; }
+    a { color: var(--accent-dark); text-decoration: underline; }
+    a:hover { color: var(--accent); }
+    header { position: sticky; top: 0; z-index: 30; background: rgba(250,247,242,0.97); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+    .topbar { max-width: 900px; margin: 0 auto; padding: 0.55rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+    .brand-block .brand { font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--accent-dark); }
+    .brand-block .tagline { font-size: 0.75rem; color: var(--muted); }
+    nav { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+    nav a { font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 999px; border: 1px solid var(--border); background: transparent; color: var(--muted); text-decoration: none; white-space: nowrap; transition: all 0.15s; }
+    nav a:hover { border-color: var(--accent); color: var(--accent-dark); background: #fdf5ef; }
+    .hero { max-width: 900px; margin: 1.2rem auto 0; padding: 0 1rem; }
+    .hero-inner { background: linear-gradient(135deg, #fdf0e6, #fff8f2); border-radius: var(--radius); border: 1px solid #f0ddd0; padding: 1.5rem 1.25rem; }
+    .hero-inner h1 { font-size: clamp(1.35rem, 4vw, 1.9rem); font-weight: 800; margin-bottom: 0.4rem; color: var(--accent-dark); }
+    .hero-inner .subtitle { font-size: 0.95rem; color: var(--muted); margin-bottom: 0.75rem; }
+    .hero-badges { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .badge { font-size: 0.75rem; padding: 0.2rem 0.7rem; border-radius: 999px; background: #fff; border: 1px solid var(--border); color: var(--accent-dark); text-decoration: none; transition: all 0.15s; }
+    .badge:hover { background: #fdf5ef; border-color: var(--accent); }
+    main { max-width: 900px; margin: 0 auto; padding: 1rem 1rem 3rem; display: flex; flex-direction: column; gap: 1.2rem; }
+    .card { background: var(--white); border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow); overflow: hidden; }
+    .card-header { display: flex; align-items: center; gap: 0.6rem; padding: 0.9rem 1.1rem 0.5rem; border-bottom: 1px solid var(--border); }
+    .card-icon { font-size: 1.2rem; }
+    .card-header h2 { font-size: 1rem; font-weight: 700; color: var(--accent-dark); flex: 1; }
+    .card-tag { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+    .card-body { padding: 0.9rem 1.1rem; }
+    .card-body p { font-size: 0.88rem; margin-bottom: 0.5rem; }
+    .card-body ul { padding-left: 1.1rem; font-size: 0.88rem; margin-bottom: 0.5rem; }
+    .card-body ul li { margin-bottom: 0.35rem; }
+    .card-body strong { color: var(--text); }
+    .subsection { margin-top: 0.85rem; }
+    .subsection h3 { font-size: 0.88rem; font-weight: 700; color: var(--accent-dark); margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.3rem; }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-top: 0.35rem; }
+    .chip { font-size: 0.73rem; padding: 0.15rem 0.55rem; border-radius: 999px; background: #fdf5ef; border: 1px solid #f0ddd0; color: var(--accent-dark); }
+    .tip { background: #f5fbf5; border: 1px solid #c3e0c3; border-radius: 8px; padding: 0.55rem 0.75rem; font-size: 0.83rem; margin-top: 0.6rem; color: #2d5a2d; }
+    footer { max-width: 900px; margin: 0 auto; padding: 0 1rem 2rem; font-size: 0.75rem; color: var(--muted); text-align: center; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="topbar">
+    <div class="brand-block">
+      <div class="brand">Heimamberg</div>
+      <div class="tagline">Bergamo, Heim am Berg</div>
+    </div>
+    <nav>
+      <a href="#mobilitaet">🚌 Mobilität</a>
+      <a href="#unterstadt">🏛️ Unterstadt</a>
+      <a href="#oberstadt">🏰 Oberstadt</a>
+      <a href="#sanvigilio">🔭 San Vigilio</a>
+      <a href="#natur">🌿 Natur</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <h1>🏔️ Bergamo entdecken</h1>
+    <p class="subtitle">Die Stadt auf drei Ebenen – ein persönlicher Reiseführer auf Deutsch von einem Einheimischen</p>
+    <div class="hero-badges">
+      <a class="badge" href="#unterstadt">🏙️ Città Bassa – Unterstadt</a>
+      <a class="badge" href="#oberstadt">🏰 Città Alta – Oberstadt (UNESCO)</a>
+      <a class="badge" href="#sanvigilio">🔭 San Vigilio – der höchste Punkt</a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <div class="card" id="mobilitaet">
+    <div class="card-header">
+      <span class="card-icon">🚌</span>
+      <h2>Mobilität: So kommst du umher</h2>
+      <span class="card-tag">Anreise</span>
+    </div>
+    <div class="card-body">
+      <ul>
+        <li><strong>Zu Fuß:</strong> Vom Bahnhof führt eine gerade Achse durch die Unterstadt – entlang des Viale Papa Giovanni und Viale Vittorio Emanuele – bis zur <a href="https://www.google.com/maps/search/?api=1&query=Porta+Sant%27Agostino+Bergamo" target="_blank">Porta Sant'Agostino</a> (dem Haupteingang der Oberstadt). Die Strecke ist ca. 3 km lang. Hinter der Porta beginnt die Oberstadt: Jede Ecke ist eine Entdeckung.</li>
+        <li><strong>Mit dem Bus – Linie 1:</strong> Verbindet den Bahnhof direkt mit <em>Colle Aperto</em>. Empfehlung: Mit der Linie 1 bis zur unteren Seilbahnstation, dann mit der <a href="https://www.google.com/maps/search/?api=1&query=Funicolare+Bergamo+Citta+Alta" target="_blank">Standseilbahn (Funicolare)</a> am Viale Vittorio Emanuele II bis zur Piazza Mercato delle Scarpe. Alternativ: die Steintreppen (Via Salita della Scaletta) hinaufgehen.</li>
+        <li><strong>Tickets:</strong> Bequem über die offizielle App <a href="https://www.atb.bergamo.it/trasporti-pubblici/biglietti/rivendite-autorizzate/app-atb-mobile" target="_blank">ATB Mobile</a> kaufen.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" id="unterstadt">
+    <div class="card-header">
+      <span class="card-icon">🏛️</span>
+      <h2>1. Città Bassa – Kunst und das „Wohnzimmer" der Stadt</h2>
+      <span class="card-tag">Unterstadt</span>
+    </div>
+    <div class="card-body">
+      <p>Vom Bahnhof entlang der Via Papa Giovanni XXIII geht man zur <a href="https://www.google.com/maps/search/?api=1&query=Porta+Nuova+Bergamo" target="_blank">Porta Nuova</a> und zum <a href="https://www.google.com/maps/search/?api=1&query=Sentierone+Bergamo" target="_blank">Sentierone</a> – dem belebten „Wohnzimmer" Bergamos. Bahnhof im Rücken, Oberstadt im Blick:</p>
+      <ul>
+        <li><strong>Shopping &amp; Flanieren:</strong> Links des Sentierone: <a href="https://www.google.com/maps/search/?api=1&query=Via+XX+Settembre+Bergamo" target="_blank">Via XX Settembre</a> und <strong>Piazza Pontida</strong> (Boutiquen, kleine Läden). Rechts: das <a href="https://www.google.com/maps/search/?api=1&query=Teatro+Donizetti+Bergamo" target="_blank">Teatro Donizetti</a> und der <a href="https://www.google.com/maps/search/?api=1&query=Quadriportico+Bergamo" target="_blank">Quadriportico</a>.</li>
+        <li><strong>Kunst &amp; Kirchen:</strong> <a href="https://lacarrara.it/" target="_blank">Accademia Carrara</a>, <a href="http://gamec.it" target="_blank">GAMeC</a>, <a href="https://www.visitbergamo.net/de/oggetto/kirche-von-den-heiligen-bartholomaeus-und-stephan/" target="_blank">San Bartolomeo</a> (Martinengo-Altarbild von Lorenzo Lotto), <a href="https://www.visitbergamo.net/de/oggetto/kirche-santo-spirito/" target="_blank">Santo Spirito</a>, <a href="https://www.visitbergamo.net/de/oggetto/kirche-san-bernardino/" target="_blank">San Bernardino</a>.</li>
+      </ul>
+      <div class="subsection">
+        <h3>🍴 Essen &amp; Trinken in der Unterstadt</h3>
+        <ul>
+          <li><strong>Frühstück &amp; Aperitivo:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Piazza+Pontida+Bergamo" target="_blank">Piazza Pontida</a> – viele Bars unter den Arkaden. Auf dem Sentierone: <a href="https://share.google/M6qf5kymdyh78WaO6" target="_blank">Pasticceria Balzer</a> und <a href="https://www.tbakerybergamo.com/" target="_blank">T-Bakery</a>.</li>
+          <li><strong>Mittagessen:</strong> Kleine Restaurants in Via San Bernardino oder Via Pignolo. Tipp: <a href="https://kindnesspizzeria.it/" target="_blank">Pizzeria Kindness</a>.</li>
+          <li><strong>Gelato:</strong> <a href="https://www.gelateriaromana.com/9-gelateria-bergamo.php" target="_blank">La Romana</a> und <a href="https://carmengelato.com/" target="_blank">Carmen</a> (Nähe Piazza Pontida).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="oberstadt">
+    <div class="card-header">
+      <span class="card-icon">🏰</span>
+      <h2>2. Città Alta – Geschichte und Panoramen</h2>
+      <span class="card-tag">Oberstadt · UNESCO</span>
+    </div>
+    <div class="card-body">
+      <p>Erreichbar zu Fuß über die Steintreppen (<em>scalette</em>) oder mit der <a href="https://www.google.com/maps/search/?api=1&query=Funicolare+Bergamo+Citta+Alta" target="_blank">Standseilbahn (Funicolare)</a>. Die Stadtstruktur folgt dem römischen Raster: Via Gombito / Via Colleoni als <em>Decumanus</em>, Via San Lorenzo / Via Mario Lupo als <em>Cardo</em>.</p>
+      <div class="subsection">
+        <h3>⭐ Unbedingt sehen</h3>
+        <ul>
+          <li><a href="https://www.visitbergamo.net/de/oggetto/piazza-vecchia" target="_blank">Piazza Vecchia</a> – das Herzstück der Oberstadt</li>
+          <li><a href="https://www.visitbergamo.net/de/oggetto/buergerturm-campanone/" target="_blank">Campanone</a> – Bürgerturm mit Stadtblick</li>
+          <li><a href="https://www.visitbergamo.net/de/oggetto/palazzo-della-ragione/" target="_blank">Palazzo della Ragione</a></li>
+          <li><a href="https://www.visitbergamo.net/de/oggetto/s-alessandro-martire-kirche-kathedrale-und-dom-von-bergamo/" target="_blank">Dom (Duomo)</a></li>
+          <li><a href="https://www.visitbergamo.net/de/oggetto/basilika-s-maria-maggiore/" target="_blank">Basilika Santa Maria Maggiore</a></li>
+        </ul>
+      </div>
+      <div class="subsection">
+        <h3>🧺 Spaziergang auf den Stadtmauern</h3>
+        <p>Ideal für ein Picknick! Vorräte im <a href="https://www.google.com/maps/search/?api=1&query=Carrefour+Express+Via+Colleoni+Bergamo" target="_blank">Carrefour Express</a> (Via Colleoni) oder bei <a href="https://www.google.com/maps/search/?api=1&query=Il+Fornaio+Via+Colleoni+Bergamo" target="_blank">Il Fornaio</a> (Pizza und Focacce).</p>
+      </div>
+      <div class="subsection">
+        <h3>🍕 Restaurants in der Oberstadt (nach Preis-Leistung)</h3>
+        <ul>
+          <li><a href="https://www.ilcircolinocittaalta.it/" target="_blank">Il Circolino</a> – Bestes Preis-Leistungs-Verhältnis, schöner Außenbereich, lokale Produkte, hervorragende Pizza.</li>
+          <li><a href="https://www.trattorialacolombina.it/" target="_blank">La Colombina</a> – Typische Bergamasker Küche, authentisch und preiswert.</li>
+          <li><a href="https://www.dafrancobergamo.it/" target="_blank">Da Franco</a> – Pizzeria mit regionalen Spezialitäten.</li>
+          <li><a href="https://www.ilsolebergamo.com/" target="_blank">Ristorante Albergo Il Sole</a> – Gepflegte Innenräume oder Terrasse; auch Pizza.</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">Casoncelli bergamaschi</span>
+          <span class="chip">Polenta e formaggio</span>
+          <span class="chip">Stracciatella-Eis</span>
+        </div>
+        <div class="tip">🍦 <a href="https://www.cavour1880.com/pasticceria.html" target="_blank">Pasticceria Cavour</a> oder <a href="https://lamarianna.it/" target="_blank">La Marianna</a> am Colle Aperto – Geburtsort des Stracciatella-Eises.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="sanvigilio">
+    <div class="card-header">
+      <span class="card-icon">🔭</span>
+      <h2>3. San Vigilio – Der Aussichtspunkt</h2>
+      <span class="card-tag">Panorama</span>
+    </div>
+    <div class="card-body">
+      <p>Zu Fuß oder mit der <a href="https://www.google.com/maps/search/?api=1&query=Funicolare+San+Vigilio+Bergamo" target="_blank">Standseilbahn San Vigilio</a> erreichbar. Oben: das <a href="https://www.visitbergamo.net/de/oggetto/castello-s-vigilio/" target="_blank">Castello di San Vigilio</a> und ein ruhiger Spaziergang durch die Hügel.</p>
+      <ul>
+        <li><a href="https://www.ristorantepizzeriasanvigilio.it/" target="_blank">Ristorante Pizzeria San Vigilio</a> – Atemberaubender Blick, ausgezeichnete Küche, etwas gehobener Preisrahmen.</li>
+        <li><a href="https://barettosanvigilio.it/" target="_blank">Baretto di San Vigilio</a> – Preisgekröntes Restaurant, ideal für besondere Anlässe, Außentische mit Stadtblick.</li>
+        <li><a href="https://share.google/qjYCWL0Tb7mk1wsnK" target="_blank">Belvedere San Vigilio</a> – Einfache Bar mit fantastischem Blick auf Hügel und Astino-Tal.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card" id="natur">
+    <div class="card-header">
+      <span class="card-icon">🌿</span>
+      <h2>Bonus: Natur und historische Stätten</h2>
+      <span class="card-tag">Ausflug</span>
+    </div>
+    <div class="card-body">
+      <p>Wer wandern möchte: hinunter zum <a href="https://www.visitbergamo.net/de/oggetto/ex-kloster-von-astino/" target="_blank">Kloster von Astino</a> und zur <a href="https://www.visitbergamo.net/de/oggetto/das-tal-der-biodiversitaet/" target="_blank">Valle della Biodiversità</a> – zwei grüne Juwelen abseits der Touristenmassen.</p>
+      <div class="tip">🔗 Alle offiziellen Tipps: <a href="https://www.visitbergamo.net/de/" target="_blank">visitbergamo.net/de</a></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <p>Heimamberg &mdash; ein persönlicher Reiseführer für Bergamo auf Deutsch.<br/>Mit ❤️ von einem Einheimischen zusammengestellt.</p>
+</footer>
+
+</body>
+</html>
